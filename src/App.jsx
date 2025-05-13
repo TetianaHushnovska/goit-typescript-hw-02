@@ -107,7 +107,7 @@ function App() {
       {!isCollection && !isLoading && valueOfSearch && !isError && (
         <ErrorMessage message="😕 No results found for your request." />
       )}
-      {isError && <ErrorMessage message={errorMessage} />}
+      {isError && !isLoading && <ErrorMessage message={errorMessage} />}
       {!isLoading && !lastPage && isCollection && (
         <>
           <LoadMoreBtn incPage={incPage} />
