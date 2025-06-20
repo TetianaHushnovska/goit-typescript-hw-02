@@ -24,6 +24,7 @@ const ImageModal = ({ modalIsOpen, closeModal, alt, src }: ImageModalProps) =>{
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
       overlayClassName="overlay"
+      ariaHideApp={false}
     >
       <img
         src={`${src}&w=800&h=600&fm=webp`}

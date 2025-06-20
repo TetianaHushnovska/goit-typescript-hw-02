@@ -78,6 +78,7 @@ function App() {
         setTotalPages(data.total_pages);
       } catch (error) {
         setIsError(true);
+        setErrorMessage(error instanceof Error ? error.message : "Unknown error");
       } finally {
         setIsLoading(false);
       }
