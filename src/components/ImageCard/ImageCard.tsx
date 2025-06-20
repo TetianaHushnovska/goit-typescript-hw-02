@@ -1,6 +1,7 @@
 import css from "./ImageCard.module.css";
+import { ImageCardProps } from "../../types/types";
 
-export default function ImageCard({ photo, openModal, isLast, bottomRef }) {
+const ImageCard = ({ photo, openModal, isLast, bottomRef }: ImageCardProps) => {
   return (
     <div className={css.blokimg} onClick={() => openModal(photo)}>
       <img
@@ -21,3 +22,5 @@ export default function ImageCard({ photo, openModal, isLast, bottomRef }) {
     </div>
   );
 }
+
+export default ImageCard;

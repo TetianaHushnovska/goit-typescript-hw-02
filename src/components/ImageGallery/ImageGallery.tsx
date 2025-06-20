@@ -1,7 +1,8 @@
 import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
+import { ImageGalleryProps } from "../../types/types";
 
-export default function ImageGallery({ photos, openModal, bottomRef }) {
+const ImageGallery = ({ photos, openModal, bottomRef }: ImageGalleryProps) => {
   return (
     <div className={css.gallery}>
       <ul className={css.list}>
@@ -23,3 +24,5 @@ export default function ImageGallery({ photos, openModal, bottomRef }) {
     </div>
   );
 }
+
+export default ImageGallery;

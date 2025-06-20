@@ -1,6 +1,7 @@
+import { ErrorProps } from "./ErroeMessage.types";
 import css from "./ErrorMessage.module.css";
 
-export default function ErrorMessage({ message }) {
+const ErrorMessage = ({ message }: ErrorProps) =>{
   return (
     <div className={css.message}>
       <h1 className={css.tittle}>{message}</h1>
@@ -10,3 +11,5 @@ export default function ErrorMessage({ message }) {
     </div>
   );
 }
+
+export default ErrorMessage;
